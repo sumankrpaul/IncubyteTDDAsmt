@@ -49,3 +49,12 @@ it("Takes new user defined delimeters of format //\n and returns sum of numbers"
     1;2`);
     expect(sumOf2).toBe(3);
 })
+
+it("Takes new user defined delimeters of format //\n but also suppost comma and new line as delimeter returns sum of numbers", ()=>{
+    const sumOf5 = myStringCalculator(`//;
+    1;2,3
+        4
+        5`);
+    expect(sumOf5).toBe(15);
+    
+})

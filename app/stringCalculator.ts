@@ -9,7 +9,7 @@ export function myStringCalculator(numbers: string){
             delem = delimeter.split(/\/\//)[1].split(/\n/)[0];
         }
 
-        const regex = new RegExp(`${delem}`);
+        const regex = new RegExp(`[,\n${delem}]`);
         return numStr.split(regex).map(val=>parseInt(val)).reduce((acc, curr)=> acc+curr, 0);
         
     } else if(numbers.split(/[,\n]/).length > 1){
