@@ -43,3 +43,9 @@ it("Retuns sum of any numbers of sumber seperated by comma or new line", ()=>{
     expect(sumOf4).toBe(10);
     expect(sumOf5).toBe(15);
 })
+
+it("Takes new user defined delimeters of format //\n and returns sum of numbers", ()=>{
+    const sumOf2 = myStringCalculator(`//;
+    1;2`);
+    expect(sumOf2).toBe(3);
+})
