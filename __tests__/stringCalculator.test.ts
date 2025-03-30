@@ -22,3 +22,12 @@ it("Returns sum of two comma seperated numbers", ()=>{
     const sum = myStringCalculator("1,2");
     expect(sum).toBe(3);
 })
+
+it("Returns sum of any mumber of numbers seperated by comma", ()=>{
+    const sumOf2 = myStringCalculator("1,2");
+    const sumOf4 = myStringCalculator("1,2,3,4");
+    const sumOf5 = myStringCalculator("1,2,3,4,5");
+    expect(sumOf2).toBe(3);
+    expect(sumOf4).toBe(10);
+    expect(sumOf5).toBe(15);
+})
