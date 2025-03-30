@@ -1,1 +1,1 @@
-export function myStringCalculator(){}
+export function myStringCalculator(numbers: string){}
