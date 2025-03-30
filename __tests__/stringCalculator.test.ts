@@ -58,5 +58,17 @@ it("Takes new user defined delimeters of format //\n but also suppost comma and 
 })
 
 it("Throws expection when negative numbers are passed", ()=>{
-    expect(()=>myStringCalculator("1,2,-3,4")).toThrow()
+    expect(()=>myStringCalculator("1,2,-3,4")).toThrow();
+    expect(()=>myStringCalculator(`//;
+        1;-2,3
+            4
+            5`)).toThrow()
+})
+
+it("Throws expeption with all the number of negative numbers supplied", ()=>{
+    expect(()=>myStringCalculator("1,2,-3,4")).toThrow("negatives not allowed -3")
+    expect(()=>myStringCalculator(`//;
+        1;-2,3
+            -4
+            5`)).toThrow("negatives not allowed -2,-4");
 })
