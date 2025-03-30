@@ -1,5 +1,4 @@
 import { myStringCalculator } from "../app/stringCalculator";
-
 // Check function prototype 
 it('myStringCalculator is callable function',()=>{
     expect(myStringCalculator).toBeInstanceOf(Function);
@@ -56,5 +55,8 @@ it("Takes new user defined delimeters of format //\n but also suppost comma and 
         4
         5`);
     expect(sumOf5).toBe(15);
-    
+})
+
+it("Throws expection when negative numbers are passed", ()=>{
+    expect(()=>myStringCalculator("1,2,-3,4")).toThrow()
 })
